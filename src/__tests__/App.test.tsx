@@ -1,6 +1,6 @@
 import { act, render } from "@testing-library/react";
 import React from "react";
-import DocViewer from "..";
+import DocViewer from "../DocViewer";
 
 test("renders component with no documents", () => {
   const comp = render(<DocViewer documents={[]} />);
