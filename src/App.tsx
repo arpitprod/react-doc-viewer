@@ -4,7 +4,7 @@ import DocViewer, { PDFRenderer, PNGRenderer, JPGRenderer, DocViewerRenderers } 
 function App() {
   return (
     <DocViewer
-			documents={[{ uri: require("./_example-files_/pdf.pdf") }, { uri: require("./_example-files_/pdf1.pdf") }]}
+			documents={[{ uri: require("./_example-files_/pdf.pdf").default }, { uri: require("./_example-files_/pdf1.pdf").default }]}
 			pluginRenderers={DocViewerRenderers}
 			config={{ header: { disableFileName: true } }}
     />

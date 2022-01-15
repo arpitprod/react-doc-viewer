@@ -5,59 +5,59 @@
 	"author": "Matthew Mogford",
 	"license": "ISC",
 	"repository": {
-	 "url": "https://github.com/Alcumus/react-doc-viewer"
+		"url": "https://github.com/Alcumus/react-doc-viewer"
 	},
 	"main": "build/index.js",
 	"types": "build/index.d.ts",
 	"dependencies": {
-	 "react-pdf": "5.6.0",
-	 "styled-components": "^5.3.3",
-	 "wl-msg-reader": "^0.2.0"
+		"react-pdf": "5.6.0",
+		"styled-components": "^5.3.3",
+		"wl-msg-reader": "^0.2.0"
 	},
 	"devDependencies": {
-	 "@testing-library/jest-dom": "^4.2.4",
-	 "@testing-library/react": "^9.5.0",
-	 "@testing-library/user-event": "^7.2.1",
-	 "@types/jest": "^24.9.1",
-	 "@types/node": "^17.0.8",
-	 "@types/react": "^17.0.38",
-	 "@types/react-dom": "^17.0.11",
-	 "@types/react-pdf": "5.0.9",
-	 "@types/styled-components": "^5.1.20",
-	 "generate-changelog": "^1.8.0",
-	 "react": "^17.0.2",
-	 "react-dom": "^17.0.2",
-	 "react-scripts": "3.4.3",
-	 "typescript": "^4.1.3"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+		"@types/react-pdf": "5.0.9",
+		"@types/styled-components": "^5.1.20",
+		"generate-changelog": "^1.8.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-scripts": "4.0.3",
+    "typescript": "4.4.2"
 	},
 	"scripts": {
-	 "start": "react-scripts start",
-	 "build": "rm -rf build && tsc -p tsconfig-npm.json",
-	 "test": "react-scripts test",
-	 "eject": "react-scripts eject",
-	 "version:patch": "npm run version:pre && npm run version:changelog && npm version patch && npm run version:post",
-	 "version:minor": "npm run version:pre && npm run version:changelog && npm version minor && npm run version:post",
-	 "version:major": "npm run version:pre && npm run version:changelog && npm version major && npm run version:post",
-	 "version:pre": "if [ $(git rev-parse --abbrev-ref HEAD) != 'master' ]; then echo \"\\033[1m\\033[31mCurrently on $(git rev-parse --abbrev-ref HEAD) branch. Please checkout master.\\033[0m\"; exit 1; else exit 0; fi",
-	 "version:changelog": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
-	 "version:post": "git push origin master && git push origin master --tags",
-	 "build-release:patch": "react-scripts test --watchAll=false && npm run build && npm run version:patch",
-	 "build-release:minor": "react-scripts test --watchAll=false && npm run build && npm run version:minor",
-	 "build-release:major": "react-scripts test --watchAll=false && npm run build && npm run version:major"
+		"start": "react-scripts start",
+		"build": "rm -rf build && tsc -p tsconfig-npm.json",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"version:patch": "npm run version:pre && npm run version:changelog && npm version patch && npm run version:post",
+		"version:minor": "npm run version:pre && npm run version:changelog && npm version minor && npm run version:post",
+		"version:major": "npm run version:pre && npm run version:changelog && npm version major && npm run version:post",
+		"version:pre": "if [ $(git rev-parse --abbrev-ref HEAD) != 'master' ]; then echo \"\\033[1m\\033[31mCurrently on $(git rev-parse --abbrev-ref HEAD) branch. Please checkout master.\\033[0m\"; exit 1; else exit 0; fi",
+		"version:changelog": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
+		"version:post": "git push origin master && git push origin master --tags",
+		"build-release:patch": "react-scripts test --watchAll=false && npm run build && npm run version:patch",
+		"build-release:minor": "react-scripts test --watchAll=false && npm run build && npm run version:minor",
+		"build-release:major": "react-scripts test --watchAll=false && npm run build && npm run version:major"
 	},
 	"eslintConfig": {
-	 "extends": "react-app"
+		"extends": "react-app"
 	},
 	"browserslist": {
-	 "production": [
-		">0.2%",
-		"not dead",
-		"not op_mini all"
-	 ],
-	 "development": [
-		"last 1 chrome version",
-		"last 1 firefox version",
-		"last 1 safari version"
-	 ]
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }
