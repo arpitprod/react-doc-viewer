@@ -2,6 +2,7 @@ import React, { FC, useContext } from "react";
 import styled from "styled-components";
 import { DocViewerContext } from "../state";
 import { IStyledProps } from "../types";
+import { getFileName } from '../utils/getFileName';
 
 export const FileName: FC<{}> = () => {
   const {
@@ -10,17 +11,7 @@ export const FileName: FC<{}> = () => {
 
   if (!currentDocument || config?.header?.disableFileName) return null;
 
-  let fileName = currentDocument.uri || "";
-  fileName = decodeURI(fileName);
-
-  if (!config?.header?.retainURLParams) {
-    fileName = fileName.split("?")[0];
-  }
-
-  const splitURL = fileName.split("/");
-  if (splitURL.length) {
-    fileName = splitURL[splitURL.length - 1];
-  }
+	const fileName = getFileName(config, currentDocument);
 
   return (
     <Container id="file-name" data-testid="file-name">

@@ -13,6 +13,7 @@ import {
   ZoomOutPDFIcon,
 } from "./icons";
 import PDFPagination from "./PDFPagination";
+import { getFileName } from '../../../utils/getFileName';
 
 const PDFControls: FC<{}> = () => {
   const {
@@ -22,6 +23,8 @@ const PDFControls: FC<{}> = () => {
 
   const currentDocument = mainState?.currentDocument || null;
 
+	const fileName = getFileName(mainState?.config, mainState?.currentDocument);
+
   return (
     <Container id="pdf-controls">
       {paginated && numPages > 1 && <PDFPagination />}
@@ -30,7 +33,7 @@ const PDFControls: FC<{}> = () => {
         <DownloadButton
           id="pdf-download"
           href={currentDocument?.fileData as string}
-          download={currentDocument?.uri}
+          download={fileName}
         >
           <DownloadPDFIcon color="#000" size="75%" />
         </DownloadButton>
