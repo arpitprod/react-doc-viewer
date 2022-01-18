@@ -1,6 +1,7 @@
-// @ts-ignore
-import * as pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 import React from "react";
+// @ts-ignore
+import * as pdfjsWorker from "react-pdf/dist/esm/pdf.worker.entry";
+// import * as pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 import { pdfjs } from "react-pdf";
 import styled from "styled-components";
 import { DocRenderer, IStyledProps } from "../../types";
