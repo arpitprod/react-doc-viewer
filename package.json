@@ -34,7 +34,7 @@
 	"scripts": {
     "copy-cmaps": "node ./scripts/copy-cmaps.js",
     "copy-worker": "node ./scripts/copy-worker.js",
-    "cra-v5-pdf": "yarn copy-cmaps && yarn copy-worker",
+    "react-pdf-cra5": "yarn copy-cmaps && yarn copy-worker",
 		"start": "react-scripts start",
 		"build": "rm -rf build && tsc -p tsconfig-npm.json",
 		"test": "react-scripts test",
